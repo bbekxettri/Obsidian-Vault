@@ -5,3 +5,5 @@
 .obsidian/workspace
 .obsidian/cache
 .obsidian/plugins/
+.gitignore
+.obsidian
