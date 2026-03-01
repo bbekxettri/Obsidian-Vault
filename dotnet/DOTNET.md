@@ -31,6 +31,7 @@ Always use plural nouns for resource collections. It’s consistent and reads na
 | `/api/product` | `/api/products`       |
 | `/api/order`   | `/api/orders`         |
 
+---
 ## HTTP Methods Deep Dive
 
 Getting HTTP methods right is fundamental. Here’s the complete picture.
@@ -103,6 +104,26 @@ app.MapDelete("/api/users/{id:int}", async (int id, UserService service) =>{    
 ```
 
 **Response**: `204 No Content` on success.
-
+___
 ## HTTP Status Codes Done Right
+
+| Code    | Name                  | When to Use                                    |
+| ------- | --------------------- | ---------------------------------------------- |
+| **200** | OK                    | Returning data successfully                    |
+| **201** | Created               | New resource created (include Location header) |
+| **204** | No Content            | Success with no body (DELETE, some PUT/PATCH)  |
+| **202** | Accepted              | Async operation accepted for processing        |
+| **400** | Bad Request           | Malformed request (bad JSON, wrong types)      |
+| **401** | Unauthorized          | Not authenticated                              |
+| **403** | Forbidden             | Authenticated but not authorized               |
+| **404** | Not Found             | Resource doesn’t exist                         |
+| **409** | Conflict              | Request conflicts with current state           |
+| **422** | Unprocessable Entity  | Validation errors                              |
+| **429** | Too Many Requests     | Rate limit exceeded                            |
+| **500** | Internal Server Error | Unexpected server error                        |
+| **502** | Bad Gateway           | Invalid upstream response                      |
+| **503** | Service Unavailable   | Server temporarily unavailable                 |
+| **504** | Gateway Timeout       | Upstream service timeout                       |
+
+---
 
