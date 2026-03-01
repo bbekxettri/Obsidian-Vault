@@ -1,0 +1,7 @@
+.DS_Store
+.trash/
+*.excalidraw.svg
+*.excalidraw
+.obsidian/workspace
+.obsidian/cache
+.obsidian/plugins/
