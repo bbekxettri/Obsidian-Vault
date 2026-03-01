@@ -1,9 +1,19 @@
+# OS files
 .DS_Store
-.trash/
-*.excalidraw.svg
-*.excalidraw
+Thumbs.db
+
+# Obsidian system files
 .obsidian/workspace
 .obsidian/cache
+.obsidian/workspace.json
+.obsidian/graph.json
 .obsidian/plugins/
-.gitignore
-.obsidian
+!.obsidian/plugins/plugins.json
+
+# Excalidraw
+*.excalidraw.svg
+*.excalidraw.temp
+
+# Trash
+.trash/
+
